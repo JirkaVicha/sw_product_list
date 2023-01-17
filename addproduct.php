@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,51 +10,47 @@
   <title>Add Product</title>
 </head>
 
-  <body>
+<body>
     <div class="container">
-    
-    <!--HEADER-->
-    <?php
-      require_once('add_product_header.php'); 
-    ?>
-
+<!--HEADER-->
+<?php
+require_once('add_product_header.php'); 
+// database connection File
+require_once('connection_db.php');
+//require_once('form_validation.php');
+?>
     <!--FORM-->
-   <?php
-    // database connection File
-    require_once('connection_db.php');
-    //require_once('form_validation.php');
-    ?>
-    <form id="myForm" class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+    <form id="product_form" class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
   
     <div class="row mb-2">
       <label for="sku" class="col-sm-2">SKU:</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" name="sku" required>
+          <input id="sku" type="text" class="form-control" name="sku" required>
         </div>  
     </div>
 
     <div class="row mb-2">
       <label for="name" class="col-sm-2">Name:</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" name="name" required>
+          <input id="name" type="text" class="form-control" name="name" required>
         </div>
     </div>
 
     <div class="row mb-2">
       <label for="price" class="col-sm-2">Price ($):</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" name="price" required>
+          <input id="price" type="text" class="form-control" name="price" required>
         </div>
     </div>
 
     <div class="row mb-2">
       <label for="type-switcher" class="col-sm-2">Type Switcher:</label>
         <div class="col-sm-4">
-          <select class="form-select" id="type-switcher" name="type">
+          <select class="form-select" id="productType" name="type">
             <option selected>Choose...</option>
-            <option value="1">DVD</option>
-            <option value="2">Book</option>
-            <option value="3">Furniture</option>
+            <option id="DVD" value="1">DVD</option>
+            <option id="Book" value="2">Book</option>
+            <option id="Furniture" value="3">Furniture</option>
           </select>
         </div>
     </div>
@@ -72,4 +65,3 @@
 
   </body>
 </html>
-

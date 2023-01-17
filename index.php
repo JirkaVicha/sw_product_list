@@ -1,8 +1,8 @@
 <?php
 // connect to the database
 require_once('connection_db.php');
+require_once('delete.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +18,8 @@ require_once('connection_db.php');
 <div class="container">
 <?php
 require_once('product_list_header.php');
-require_once('delete.php');
 require_once('cards.php');
 ?>
-
-
-
-
 </body>
 </html>
   

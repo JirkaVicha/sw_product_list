@@ -1,9 +1,10 @@
 <?php
+error_reporting (E_ALL ^ E_NOTICE); 
 // Connection to the database
 $db_server = 'localhost';
-$username = 'root';
-$password = "";
-$db_name = 'addproductDB';
+$username = 'id20139670_products';
+$password = "%Lrs@]{/dy6*YQ%I";
+$db_name = 'id20139670_addproductdb';
 
 $con = new mysqli($db_server, $username, $password, $db_name);
 
@@ -36,7 +37,7 @@ if (isset($_POST['submit'])) {
   try {
     $stmt->bind_param("ssdi", $sku, $name, $price, $type);
     if (!$stmt->execute()) {
-      die("Execution failed: (" . $stmt->errno . ") " . $stmt->error);
+      die("Execution failed: (" . $stmt->errno . ") " . $stmt->error . '. Please, Enter unique SKU. <a href="addproduct.php">Add new product</a>');
   }
 }
 catch(Exception $e) {
@@ -72,7 +73,6 @@ catch(Exception $e) {
   }
   $stmt->close();
   $con->close();
-  
   header("Location: index.php");
 }
 ?>

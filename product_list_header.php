@@ -1,4 +1,3 @@
-
 <!--Product List HEADER-->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
@@ -12,11 +11,11 @@
   <div class="collapse navbar-collapse" id="collapseNavbar">
     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a href="addproduct.php" class="btn btn-success btn-sm">Add Product</a>
+        <a href="addproduct.php" class="btn btn-success btn-sm">ADD</a>
       </li>
       <li class="nav-item">
       <form method="post" id="delete_form">
-        <button type="submit" name="delete-product-btn" id="delete-product-btn" class="btn btn-secondary btn-sm ms-3">Mass Delete</button>
+        <button type="submit" name="delete-product-btn" id="delete-product-btn" class="btn btn-secondary btn-sm ms-3">MASS DELETE</button>
       </li>
       </form>
     </ul>
