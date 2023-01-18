@@ -1,3 +1,6 @@
+<?php
+require_once('components/connection_db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="style.css" type="text/css" rel="stylesheet" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
   <title>Add Product</title>
 </head>
 
@@ -14,10 +17,7 @@
     <div class="container">
 <!--HEADER-->
 <?php
-require_once('add_product_header.php'); 
-// database connection File
-require_once('connection_db.php');
-//require_once('form_validation.php');
+require_once('page_components/add_product_header.php');
 ?>
     <!--FORM-->
     <form id="product_form" class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
@@ -61,7 +61,7 @@ require_once('connection_db.php');
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 
   </body>
 </html>

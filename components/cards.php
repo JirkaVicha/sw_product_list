@@ -29,7 +29,7 @@ if ($row > 0) {
                                                                                 <?php echo $row['length'];?> Cm
                       <?php }?></h6>
 
-            <input class="form-check-input" form='delete_form' name="delete_form[]" type="checkbox" value="<?php echo $row['product_id'];?>" id="delete_form">
+            <input class="form-check-input delete-checkbox" form='delete_form' name="delete_form[]" type="checkbox" value="<?php echo $row['product_id'];?>" id="delete_form">
            <label class="form-check-label text-muted" for="defaultCheck1">Select</label>
           </div>
         </div>
@@ -40,7 +40,4 @@ if ($row > 0) {
 }
 $con->close();
 ?>
-
-
-
 </div>

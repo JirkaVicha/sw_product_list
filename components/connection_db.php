@@ -2,9 +2,9 @@
 error_reporting (E_ALL ^ E_NOTICE); 
 // Connection to the database
 $db_server = 'localhost';
-$username = 'id20139670_products';
-$password = "%Lrs@]{/dy6*YQ%I";
-$db_name = 'id20139670_addproductdb';
+$username = 'root'; //'id20139670_products';
+$password = ''; //"%Lrs@]{/dy6*YQ%I";
+$db_name = 'addproductDB'; //'id20139670_addproductdb';
 
 $con = new mysqli($db_server, $username, $password, $db_name);
 
@@ -73,6 +73,6 @@ catch(Exception $e) {
   }
   $stmt->close();
   $con->close();
-  header("Location: index.php");
+  header("Location: ./index.php");
 }
 ?>

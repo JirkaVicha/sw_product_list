@@ -11,7 +11,7 @@ if (isset($_POST['delete-product-btn'])) {
       $result = mysqli_query($con, "DELETE FROM products WHERE product_id = " . $id);
   }
   $msg = "Deleted Successfully.";
-  header("Location: index.php?msg=$msg");
+  header("Location: ./index.php?msg=$msg");
 }
 }
 ?>
